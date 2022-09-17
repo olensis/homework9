@@ -29,12 +29,47 @@ public class Main {
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i] > maxSum) {
                     maxSum = arr[i];
-                    System.out.println(" максимальная сумма" + maxSum);
+
+                } else if (arr[i] < minSum) {
+                    minSum = arr[i];
                 }
             }
+            {
+                System.out.println(" минимальная сумма " + minSum + " максимальная сумма " + maxSum);
+            }
+
+            // Задание 3
+            var average = 0;
+            if (arr.length > 0) {
+                var sum1 = 0;
+                for (int i = 0; i < arr.length; i++) {
+                    sum1 += arr[i];
+                }
+                average = sum1 / arr.length;
+            }
+            System.out.println(" Средняя сумма затрат составила " + average);
+
+            // Задание 4
+
+            {
+                char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+                for (int i = reverseFullName.length - 1; i >= 0; i--) {
+                    String oldString = "navI vonavI";
+                    String newString = oldString.replace("navI vonavI", "Ivanov Ivan");
+                    {
+                        System.out.println(newString);
+                    }
+                }
+
+            }
+
+
+
+
+
+
+
         }
-
-
 
     }
 
